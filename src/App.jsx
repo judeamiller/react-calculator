@@ -47,11 +47,13 @@ class App extends Component {
           <div className="row">
             <Button handleClick={this.concatenateInput}>.</Button>
             <Button handleClick={this.concatenateInput}>0</Button>
-            <Button handleClick={this.handleEqual}>=</Button>
+            <ClearButton handleClear={()=> this.setState({input: ""})}>C</ClearButton>
+            
             <Button handleClick={this.concatenateInput}>-</Button>
           </div>
           <div className="row">
-            <ClearButton handleClear={()=> this.setState({input: ""})}>Clear</ClearButton>
+          <Button handleClick={this.handleEqual}>=</Button>
+            
           </div>
         </div>
       </div>
